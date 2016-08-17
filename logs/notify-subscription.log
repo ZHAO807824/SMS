@@ -1,0 +1,700 @@
+2016-08-17 22:25:22,376 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 22:25:22,400 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6633a290, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@47f5d05b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5b422b45, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5526edd1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ec76003]
+ 2016-08-17 22:25:22,578 - Loading XML bean definitions from class path resource [spring/srping-bean.xml]
+ 2016-08-17 22:25:22,580 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@47f5d05b] to prepare test instance [com.sms.service.admin.AdminServiceTest@5d6227a2]
+ java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [spring/srping-bean.xml]; nested exception is java.io.FileNotFoundException: class path resource [spring/srping-bean.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:344)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadBeanDefinitions(AbstractGenericContextLoader.java:253)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:122)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 25 more
+Caused by: java.io.FileNotFoundException: class path resource [spring/srping-bean.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:330)
+	... 37 more
+2016-08-17 22:25:36,920 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 22:25:36,943 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2779bd11, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@296bbb56, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5fd82058, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6633a290, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@47f5d05b]
+ 2016-08-17 22:25:37,119 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 22:25:37,368 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 22:25:37,422 - Refreshing org.springframework.context.support.GenericApplicationContext@94f025b: startup date [Wed Aug 17 22:25:37 CST 2016]; root of context hierarchy
+ 2016-08-17 22:25:37,555 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 22:25:37,619 - MLog clients using log4j logging.
+ 2016-08-17 22:25:37,819 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 22:25:38,110 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 22:25:38,117 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 22:25:38,119 - HHH000206: hibernate.properties not found
+ 2016-08-17 22:25:38,120 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 22:25:38,303 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16f7h4k1na5mkw|11afda9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16f7h4k1na5mkw|11afda9, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 22:25:38,570 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+ 2016-08-17 22:25:38,579 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 22:25:38,620 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 22:25:38,626 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 22:25:38,746 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16f7h4k1na5mkw|11afda9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16f7h4k1na5mkw|11afda9, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 22:25:38,807 - Initializing EhCache CacheManager
+ 2016-08-17 22:25:39,050 - Closing org.springframework.context.support.GenericApplicationContext@94f025b: startup date [Wed Aug 17 22:25:37 CST 2016]; root of context hierarchy
+ 2016-08-17 22:25:39,060 - Shutting down EhCache CacheManager
+ 2016-08-17 22:34:16,750 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 22:34:16,774 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5fd82058, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6633a290, org.springframework.test.context.support.DirtiesContextTestExecutionListener@47f5d05b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5b422b45, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5526edd1]
+ 2016-08-17 22:34:16,944 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 22:34:17,197 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 22:34:17,253 - Refreshing org.springframework.context.support.GenericApplicationContext@53354a57: startup date [Wed Aug 17 22:34:17 CST 2016]; root of context hierarchy
+ 2016-08-17 22:34:17,379 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 22:34:17,385 - Exception encountered during context initialization - cancelling refresh attempt
+ org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'sessionFactory' defined in class path resource [spring/spring-bean.xml]: Could not resolve placeholder 'hibernate.dialect' in string value "${hibernate.dialect}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'hibernate.dialect' in string value "${hibernate.dialect}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.processProperties(PropertySourcesPlaceholderConfigurer.java:180)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:155)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'hibernate.dialect' in string value "${hibernate.dialect}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:204)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:178)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$2.resolveStringValue(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitMap(BeanDefinitionVisitor.java:262)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:198)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 37 more
+2016-08-17 22:34:17,388 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6633a290] to prepare test instance [com.sms.service.admin.AdminServiceTest@132ca201]
+ java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'sessionFactory' defined in class path resource [spring/spring-bean.xml]: Could not resolve placeholder 'hibernate.dialect' in string value "${hibernate.dialect}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'hibernate.dialect' in string value "${hibernate.dialect}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.processProperties(PropertySourcesPlaceholderConfigurer.java:180)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:155)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 25 more
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'hibernate.dialect' in string value "${hibernate.dialect}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:204)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:178)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$2.resolveStringValue(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitMap(BeanDefinitionVisitor.java:262)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:198)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 37 more
+2016-08-17 22:35:36,182 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 22:35:36,205 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@47f5d05b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5b422b45, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5526edd1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6ec76003, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63709dc6]
+ 2016-08-17 22:35:36,374 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 22:35:36,631 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 22:35:36,682 - Refreshing org.springframework.context.support.GenericApplicationContext@7ae9e9b: startup date [Wed Aug 17 22:35:36 CST 2016]; root of context hierarchy
+ 2016-08-17 22:35:36,809 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 22:35:36,873 - MLog clients using log4j logging.
+ 2016-08-17 22:35:37,070 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 22:35:37,358 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 22:35:37,364 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 22:35:37,366 - HHH000206: hibernate.properties not found
+ 2016-08-17 22:35:37,368 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 22:35:37,560 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16fkbijg854zs|51d414c5, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16fkbijg854zs|51d414c5, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 22:35:37,822 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 22:35:37,830 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 22:35:37,910 - Exception encountered during context initialization - cancelling refresh attempt
+ org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [spring/spring-bean.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.sms.entity.admin.Admin
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:736)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.sms.entity.admin.Admin
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:277)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:224)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:775)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3788)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3742)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1410)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1844)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 40 more
+2016-08-17 22:35:37,927 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5b422b45] to prepare test instance [com.sms.service.admin.AdminServiceTest@67056c41]
+ java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [spring/spring-bean.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: com.sms.entity.admin.Admin
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:736)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 25 more
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: com.sms.entity.admin.Admin
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:277)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:224)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:775)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:3788)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3742)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1410)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1844)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 40 more
+2016-08-17 22:36:13,949 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 22:36:13,973 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6633a290, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@47f5d05b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5b422b45, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5526edd1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ec76003]
+ 2016-08-17 22:36:14,131 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 22:36:14,393 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 22:36:14,448 - Refreshing org.springframework.context.support.GenericApplicationContext@4fa3c06e: startup date [Wed Aug 17 22:36:14 CST 2016]; root of context hierarchy
+ 2016-08-17 22:36:14,579 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 22:36:14,652 - MLog clients using log4j logging.
+ 2016-08-17 22:36:14,857 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 22:36:15,156 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 22:36:15,162 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 22:36:15,164 - HHH000206: hibernate.properties not found
+ 2016-08-17 22:36:15,166 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 22:36:15,344 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16fl4o0jlxzxf|130362d0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16fl4o0jlxzxf|130362d0, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 22:36:15,611 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 22:36:15,620 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 22:36:15,756 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 22:36:15,761 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 22:36:16,013 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 22:36:16,013 - HHH000102: Fetching database metadata
+ 2016-08-17 22:36:16,016 - HHH000396: Updating schema
+ 2016-08-17 22:36:16,038 - HHH000261: Table found: sms.admin
+ 2016-08-17 22:36:16,038 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 22:36:16,038 - HHH000108: Foreign keys: []
+ 2016-08-17 22:36:16,038 - HHH000126: Indexes: [primary]
+ 2016-08-17 22:36:16,039 - HHH000232: Schema update complete
+ 2016-08-17 22:36:16,113 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16fl4o0jlxzxf|130362d0, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16fl4o0jlxzxf|130362d0, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 22:36:16,169 - Initializing EhCache CacheManager
+ 2016-08-17 22:36:16,508 - Closing org.springframework.context.support.GenericApplicationContext@4fa3c06e: startup date [Wed Aug 17 22:36:14 CST 2016]; root of context hierarchy
+ 2016-08-17 22:36:16,516 - Shutting down EhCache CacheManager
+ 2016-08-17 23:04:50,354 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:04:50,380 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2842cace, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3910af08, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7653537c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@588e2e94, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e9423f7]
+ 2016-08-17 23:04:50,558 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:04:50,820 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:04:50,885 - Refreshing org.springframework.context.support.GenericApplicationContext@d73d5c3: startup date [Wed Aug 17 23:04:50 CST 2016]; root of context hierarchy
+ 2016-08-17 23:04:51,000 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:04:51,066 - MLog clients using log4j logging.
+ 2016-08-17 23:04:51,264 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:04:51,557 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:04:51,563 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:04:51,565 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:04:51,566 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:04:51,742 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16glx23pcgoz1|1453c29c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16glx23pcgoz1|1453c29c, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:04:52,007 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:04:52,015 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:04:52,136 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:04:52,141 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:04:52,367 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:04:52,367 - HHH000102: Fetching database metadata
+ 2016-08-17 23:04:52,371 - HHH000396: Updating schema
+ 2016-08-17 23:04:52,403 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:04:52,403 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:04:52,403 - HHH000108: Foreign keys: []
+ 2016-08-17 23:04:52,403 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:04:52,404 - HHH000232: Schema update complete
+ 2016-08-17 23:04:52,481 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16glx23pcgoz1|1453c29c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16glx23pcgoz1|1453c29c, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:04:52,546 - Initializing EhCache CacheManager
+ 2016-08-17 23:04:52,667 - Closing org.springframework.context.support.GenericApplicationContext@d73d5c3: startup date [Wed Aug 17 23:04:50 CST 2016]; root of context hierarchy
+ 2016-08-17 23:04:52,677 - Shutting down EhCache CacheManager
+ 2016-08-17 23:08:07,268 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:08:07,293 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2842cace, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3910af08, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7653537c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@588e2e94, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e9423f7]
+ 2016-08-17 23:08:07,463 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:08:07,741 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:08:07,813 - Refreshing org.springframework.context.support.GenericApplicationContext@d73d5c3: startup date [Wed Aug 17 23:08:07 CST 2016]; root of context hierarchy
+ 2016-08-17 23:08:07,937 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:08:08,008 - MLog clients using log4j logging.
+ 2016-08-17 23:08:08,208 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:08:08,502 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:08:08,509 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:08:08,511 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:08:08,512 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:08:08,702 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16gq50qs3al7v|2ea0c364, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16gq50qs3al7v|2ea0c364, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:08:08,967 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:08:08,976 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:08:09,107 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:08:09,112 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:08:09,355 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:08:09,355 - HHH000102: Fetching database metadata
+ 2016-08-17 23:08:09,359 - HHH000396: Updating schema
+ 2016-08-17 23:08:09,392 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:08:09,393 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:08:09,393 - HHH000108: Foreign keys: []
+ 2016-08-17 23:08:09,393 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:08:09,394 - HHH000232: Schema update complete
+ 2016-08-17 23:08:09,469 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16gq50qs3al7v|2ea0c364, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16gq50qs3al7v|2ea0c364, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:08:09,530 - Initializing EhCache CacheManager
+ 2016-08-17 23:08:09,650 - Closing org.springframework.context.support.GenericApplicationContext@d73d5c3: startup date [Wed Aug 17 23:08:07 CST 2016]; root of context hierarchy
+ 2016-08-17 23:08:09,659 - Shutting down EhCache CacheManager
+ 2016-08-17 23:11:29,732 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:11:29,758 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@755ee1ed, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2842cace, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3910af08, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7653537c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@588e2e94]
+ 2016-08-17 23:11:29,927 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:11:30,203 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:11:30,267 - Refreshing org.springframework.context.support.GenericApplicationContext@28b6483: startup date [Wed Aug 17 23:11:30 CST 2016]; root of context hierarchy
+ 2016-08-17 23:11:30,396 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:11:30,467 - MLog clients using log4j logging.
+ 2016-08-17 23:11:30,670 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:11:30,968 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:11:30,975 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:11:30,977 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:11:30,978 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:11:31,166 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16guh8o1ih60q5|2ea0c364, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16guh8o1ih60q5|2ea0c364, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:11:31,430 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:11:31,439 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:11:31,562 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:11:31,567 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:11:31,810 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:11:31,810 - HHH000102: Fetching database metadata
+ 2016-08-17 23:11:31,813 - HHH000396: Updating schema
+ 2016-08-17 23:11:31,845 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:11:31,846 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:11:31,846 - HHH000108: Foreign keys: []
+ 2016-08-17 23:11:31,846 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:11:31,846 - HHH000232: Schema update complete
+ 2016-08-17 23:11:31,923 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16guh8o1ih60q5|2ea0c364, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16guh8o1ih60q5|2ea0c364, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:11:31,979 - Initializing EhCache CacheManager
+ 2016-08-17 23:11:32,233 - Closing org.springframework.context.support.GenericApplicationContext@28b6483: startup date [Wed Aug 17 23:11:30 CST 2016]; root of context hierarchy
+ 2016-08-17 23:11:32,248 - Shutting down EhCache CacheManager
+ 2016-08-17 23:13:44,815 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:13:44,841 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7653537c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@588e2e94, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e9423f7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4fc55da3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2686a13f]
+ 2016-08-17 23:13:45,013 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:13:45,278 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:13:45,337 - Refreshing org.springframework.context.support.GenericApplicationContext@4b416926: startup date [Wed Aug 17 23:13:45 CST 2016]; root of context hierarchy
+ 2016-08-17 23:13:45,453 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:13:45,519 - MLog clients using log4j logging.
+ 2016-08-17 23:13:45,716 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:13:45,997 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:13:46,004 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:13:46,006 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:13:46,007 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:13:46,192 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16gxdg1o8w1oy|129f8ab4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16gxdg1o8w1oy|129f8ab4, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:13:46,459 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:13:46,468 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:13:46,593 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:13:46,598 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:13:46,827 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:13:46,827 - HHH000102: Fetching database metadata
+ 2016-08-17 23:13:46,831 - HHH000396: Updating schema
+ 2016-08-17 23:13:46,862 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:13:46,863 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:13:46,863 - HHH000108: Foreign keys: []
+ 2016-08-17 23:13:46,863 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:13:46,863 - HHH000232: Schema update complete
+ 2016-08-17 23:13:46,935 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16gxdg1o8w1oy|129f8ab4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16gxdg1o8w1oy|129f8ab4, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:13:46,998 - Initializing EhCache CacheManager
+ 2016-08-17 23:13:47,238 - Closing org.springframework.context.support.GenericApplicationContext@4b416926: startup date [Wed Aug 17 23:13:45 CST 2016]; root of context hierarchy
+ 2016-08-17 23:13:47,249 - Shutting down EhCache CacheManager
+ 2016-08-17 23:15:48,064 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:15:48,089 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3910af08, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7653537c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@588e2e94, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e9423f7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fc55da3]
+ 2016-08-17 23:15:48,260 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:15:48,538 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:15:48,601 - Refreshing org.springframework.context.support.GenericApplicationContext@2fd6fc1b: startup date [Wed Aug 17 23:15:48 CST 2016]; root of context hierarchy
+ 2016-08-17 23:15:48,720 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:15:48,784 - MLog clients using log4j logging.
+ 2016-08-17 23:15:48,987 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:15:49,285 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:15:49,291 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:15:49,293 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:15:49,294 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:15:49,481 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h00k715oapkm|59444b1d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h00k715oapkm|59444b1d, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:15:49,755 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:15:49,763 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:15:49,901 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:15:49,905 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:15:50,139 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:15:50,139 - HHH000102: Fetching database metadata
+ 2016-08-17 23:15:50,143 - HHH000396: Updating schema
+ 2016-08-17 23:15:50,177 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:15:50,177 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:15:50,177 - HHH000108: Foreign keys: []
+ 2016-08-17 23:15:50,177 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:15:50,178 - HHH000232: Schema update complete
+ 2016-08-17 23:15:50,258 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h00k715oapkm|59444b1d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h00k715oapkm|59444b1d, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:15:50,317 - Initializing EhCache CacheManager
+ 2016-08-17 23:15:50,576 - Closing org.springframework.context.support.GenericApplicationContext@2fd6fc1b: startup date [Wed Aug 17 23:15:48 CST 2016]; root of context hierarchy
+ 2016-08-17 23:15:50,589 - Shutting down EhCache CacheManager
+ 2016-08-17 23:16:04,444 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:16:04,468 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3910af08, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7653537c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@588e2e94, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e9423f7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fc55da3]
+ 2016-08-17 23:16:04,645 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:16:04,906 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:16:04,971 - Refreshing org.springframework.context.support.GenericApplicationContext@2fd6fc1b: startup date [Wed Aug 17 23:16:04 CST 2016]; root of context hierarchy
+ 2016-08-17 23:16:05,089 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:16:05,153 - MLog clients using log4j logging.
+ 2016-08-17 23:16:05,351 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:16:05,644 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:16:05,650 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:16:05,652 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:16:05,654 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:16:05,841 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h0d6q13cq9l9|129f8ab4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h0d6q13cq9l9|129f8ab4, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:16:06,097 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:16:06,106 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:16:06,236 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:16:06,240 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:16:06,469 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:16:06,469 - HHH000102: Fetching database metadata
+ 2016-08-17 23:16:06,472 - HHH000396: Updating schema
+ 2016-08-17 23:16:06,505 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:16:06,505 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:16:06,505 - HHH000108: Foreign keys: []
+ 2016-08-17 23:16:06,505 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:16:06,506 - HHH000232: Schema update complete
+ 2016-08-17 23:16:06,579 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h0d6q13cq9l9|129f8ab4, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h0d6q13cq9l9|129f8ab4, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:16:06,643 - Initializing EhCache CacheManager
+ 2016-08-17 23:16:06,905 - Closing org.springframework.context.support.GenericApplicationContext@2fd6fc1b: startup date [Wed Aug 17 23:16:04 CST 2016]; root of context hierarchy
+ 2016-08-17 23:16:06,918 - Shutting down EhCache CacheManager
+ 2016-08-17 23:17:51,220 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:17:51,244 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3910af08, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7653537c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@588e2e94, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e9423f7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4fc55da3]
+ 2016-08-17 23:17:51,409 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:17:51,782 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:17:51,862 - Refreshing org.springframework.context.support.GenericApplicationContext@2fd6fc1b: startup date [Wed Aug 17 23:17:51 CST 2016]; root of context hierarchy
+ 2016-08-17 23:17:51,991 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:17:52,056 - MLog clients using log4j logging.
+ 2016-08-17 23:17:52,252 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:17:52,548 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:17:52,555 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:17:52,557 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:17:52,558 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:17:52,748 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h2no71us9soy|3c7bf226, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h2no71us9soy|3c7bf226, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:17:53,013 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:17:53,022 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:17:53,150 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:17:53,155 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:17:53,385 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:17:53,385 - HHH000102: Fetching database metadata
+ 2016-08-17 23:17:53,388 - HHH000396: Updating schema
+ 2016-08-17 23:17:53,421 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:17:53,421 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:17:53,421 - HHH000108: Foreign keys: []
+ 2016-08-17 23:17:53,421 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:17:53,422 - HHH000232: Schema update complete
+ 2016-08-17 23:17:53,498 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h2no71us9soy|3c7bf226, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h2no71us9soy|3c7bf226, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:17:53,556 - Initializing EhCache CacheManager
+ 2016-08-17 23:17:53,870 - Closing org.springframework.context.support.GenericApplicationContext@2fd6fc1b: startup date [Wed Aug 17 23:17:51 CST 2016]; root of context hierarchy
+ 2016-08-17 23:17:53,880 - Shutting down EhCache CacheManager
+ 2016-08-17 23:21:04,239 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:21:04,264 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5526edd1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6ec76003, org.springframework.test.context.support.DirtiesContextTestExecutionListener@63709dc6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7686652a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@715be530]
+ 2016-08-17 23:21:04,448 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:21:04,714 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:21:04,767 - Refreshing org.springframework.context.support.GenericApplicationContext@11e71d39: startup date [Wed Aug 17 23:21:04 CST 2016]; root of context hierarchy
+ 2016-08-17 23:21:04,889 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:21:04,953 - MLog clients using log4j logging.
+ 2016-08-17 23:21:05,148 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:21:05,447 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:21:05,453 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:21:05,455 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:21:05,457 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:21:05,649 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h6sigcaip9|76e68f59, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h6sigcaip9|76e68f59, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:21:05,909 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:21:05,918 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:21:06,045 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:21:06,051 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:21:06,279 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:21:06,279 - HHH000102: Fetching database metadata
+ 2016-08-17 23:21:06,282 - HHH000396: Updating schema
+ 2016-08-17 23:21:06,314 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:21:06,314 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:21:06,314 - HHH000108: Foreign keys: []
+ 2016-08-17 23:21:06,314 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:21:06,315 - HHH000232: Schema update complete
+ 2016-08-17 23:21:06,385 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h6sigcaip9|76e68f59, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h6sigcaip9|76e68f59, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:21:06,440 - Initializing EhCache CacheManager
+ 2016-08-17 23:21:06,797 - Closing org.springframework.context.support.GenericApplicationContext@11e71d39: startup date [Wed Aug 17 23:21:04 CST 2016]; root of context hierarchy
+ 2016-08-17 23:21:06,804 - Shutting down EhCache CacheManager
+ 2016-08-17 23:21:47,422 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:21:47,459 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5526edd1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6ec76003, org.springframework.test.context.support.DirtiesContextTestExecutionListener@63709dc6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7686652a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@715be530]
+ 2016-08-17 23:21:47,663 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:21:47,953 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:21:48,018 - Refreshing org.springframework.context.support.GenericApplicationContext@11e71d39: startup date [Wed Aug 17 23:21:48 CST 2016]; root of context hierarchy
+ 2016-08-17 23:21:48,145 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:21:48,212 - MLog clients using log4j logging.
+ 2016-08-17 23:21:48,447 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:21:48,747 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:21:48,754 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:21:48,756 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:21:48,757 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:21:48,941 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h7pwr5ycqat|54957b67, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h7pwr5ycqat|54957b67, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:21:49,200 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:21:49,208 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:21:49,334 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:21:49,339 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:21:49,569 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:21:49,569 - HHH000102: Fetching database metadata
+ 2016-08-17 23:21:49,572 - HHH000396: Updating schema
+ 2016-08-17 23:21:49,606 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:21:49,606 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:21:49,606 - HHH000108: Foreign keys: []
+ 2016-08-17 23:21:49,606 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:21:49,607 - HHH000232: Schema update complete
+ 2016-08-17 23:21:49,680 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h7pwr5ycqat|54957b67, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h7pwr5ycqat|54957b67, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:21:49,743 - Initializing EhCache CacheManager
+ 2016-08-17 23:21:50,078 - Closing org.springframework.context.support.GenericApplicationContext@11e71d39: startup date [Wed Aug 17 23:21:48 CST 2016]; root of context hierarchy
+ 2016-08-17 23:21:50,086 - Shutting down EhCache CacheManager
+ 2016-08-17 23:22:50,624 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:22:50,649 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5b422b45, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5526edd1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6ec76003, org.springframework.test.context.transaction.TransactionalTestExecutionListener@63709dc6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7686652a]
+ 2016-08-17 23:22:50,830 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:22:51,092 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:22:51,147 - Refreshing org.springframework.context.support.GenericApplicationContext@592ed60d: startup date [Wed Aug 17 23:22:51 CST 2016]; root of context hierarchy
+ 2016-08-17 23:22:51,272 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:22:51,336 - MLog clients using log4j logging.
+ 2016-08-17 23:22:51,537 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:22:51,822 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:22:51,828 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:22:51,830 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:22:51,832 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:22:52,016 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h92lm1dgf4fq|21e8c241, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h92lm1dgf4fq|21e8c241, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:22:52,272 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:22:52,280 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:22:52,403 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:22:52,407 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:22:52,638 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:22:52,638 - HHH000102: Fetching database metadata
+ 2016-08-17 23:22:52,641 - HHH000396: Updating schema
+ 2016-08-17 23:22:52,673 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:22:52,673 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:22:52,673 - HHH000108: Foreign keys: []
+ 2016-08-17 23:22:52,673 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:22:52,674 - HHH000232: Schema update complete
+ 2016-08-17 23:22:52,744 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h92lm1dgf4fq|21e8c241, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h92lm1dgf4fq|21e8c241, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:22:52,804 - Initializing EhCache CacheManager
+ 2016-08-17 23:22:53,130 - Closing org.springframework.context.support.GenericApplicationContext@592ed60d: startup date [Wed Aug 17 23:22:51 CST 2016]; root of context hierarchy
+ 2016-08-17 23:22:53,140 - Shutting down EhCache CacheManager
+ 2016-08-17 23:23:24,978 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:23:25,002 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5526edd1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6ec76003, org.springframework.test.context.support.DirtiesContextTestExecutionListener@63709dc6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7686652a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@715be530]
+ 2016-08-17 23:23:25,177 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:23:25,485 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:23:25,545 - Refreshing org.springframework.context.support.GenericApplicationContext@11e71d39: startup date [Wed Aug 17 23:23:25 CST 2016]; root of context hierarchy
+ 2016-08-17 23:23:25,673 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:23:25,742 - MLog clients using log4j logging.
+ 2016-08-17 23:23:25,944 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:23:26,231 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:23:26,237 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:23:26,239 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:23:26,241 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:23:26,426 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h9t5e1k3dh7w|1f90eeec, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h9t5e1k3dh7w|1f90eeec, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:23:26,691 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:23:26,700 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:23:26,825 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:23:26,829 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:23:27,059 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:23:27,059 - HHH000102: Fetching database metadata
+ 2016-08-17 23:23:27,063 - HHH000396: Updating schema
+ 2016-08-17 23:23:27,084 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:23:27,084 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:23:27,084 - HHH000108: Foreign keys: []
+ 2016-08-17 23:23:27,084 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:23:27,085 - HHH000232: Schema update complete
+ 2016-08-17 23:23:27,159 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16h9t5e1k3dh7w|1f90eeec, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16h9t5e1k3dh7w|1f90eeec, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:23:27,225 - Initializing EhCache CacheManager
+ 2016-08-17 23:23:27,654 - Closing org.springframework.context.support.GenericApplicationContext@11e71d39: startup date [Wed Aug 17 23:23:25 CST 2016]; root of context hierarchy
+ 2016-08-17 23:23:27,664 - Shutting down EhCache CacheManager
+ 2016-08-17 23:25:45,035 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+ 2016-08-17 23:25:45,059 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7653537c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@588e2e94, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e9423f7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4fc55da3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2686a13f]
+ 2016-08-17 23:25:45,227 - Loading XML bean definitions from class path resource [spring/spring-bean.xml]
+ 2016-08-17 23:25:45,484 - Loading XML bean definitions from class path resource [spring/spring-cache.xml]
+ 2016-08-17 23:25:45,551 - Refreshing org.springframework.context.support.GenericApplicationContext@4b416926: startup date [Wed Aug 17 23:25:45 CST 2016]; root of context hierarchy
+ 2016-08-17 23:25:45,665 - Loading properties file from class path resource [jdbc.properties]
+ 2016-08-17 23:25:45,730 - MLog clients using log4j logging.
+ 2016-08-17 23:25:45,924 - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+ 2016-08-17 23:25:46,213 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+ 2016-08-17 23:25:46,219 - HHH000412: Hibernate Core {4.3.5.Final}
+ 2016-08-17 23:25:46,221 - HHH000206: hibernate.properties not found
+ 2016-08-17 23:25:46,222 - HHH000021: Bytecode provider name : javassist
+ 2016-08-17 23:25:46,406 - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16hct5uqs9fww|70d9a31, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16hct5uqs9fww|70d9a31, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+ 2016-08-17 23:25:46,662 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+ 2016-08-17 23:25:46,670 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+ 2016-08-17 23:25:46,793 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+ 2016-08-17 23:25:46,798 - HHH000397: Using ASTQueryTranslatorFactory
+ 2016-08-17 23:25:47,022 - HHH000228: Running hbm2ddl schema update
+ 2016-08-17 23:25:47,022 - HHH000102: Fetching database metadata
+ 2016-08-17 23:25:47,025 - HHH000396: Updating schema
+ 2016-08-17 23:25:47,057 - HHH000261: Table found: sms.admin
+ 2016-08-17 23:25:47,058 - HHH000037: Columns: [id, name, password]
+ 2016-08-17 23:25:47,058 - HHH000108: Foreign keys: []
+ 2016-08-17 23:25:47,058 - HHH000126: Indexes: [primary]
+ 2016-08-17 23:25:47,058 - HHH000232: Schema update complete
+ 2016-08-17 23:25:47,129 - Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 2, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1b60m519i16hct5uqs9fww|70d9a31, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1b60m519i16hct5uqs9fww|70d9a31, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/sms?characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 20, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+ 2016-08-17 23:25:47,192 - Initializing EhCache CacheManager
+ 2016-08-17 23:25:47,517 - Closing org.springframework.context.support.GenericApplicationContext@4b416926: startup date [Wed Aug 17 23:25:45 CST 2016]; root of context hierarchy
+ 2016-08-17 23:25:47,529 - Shutting down EhCache CacheManager
+ 
